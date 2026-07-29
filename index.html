@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trainingspläne</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#c0392b">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+ background:linear-gradient(160deg,#c0392b 0%,#7d1f16 100%);color:#fff;
+ display:flex;align-items:center;justify-content:center;padding:24px}
+.wrap{width:100%;max-width:440px}
+h1{margin:0 0 4px;font-size:30px;letter-spacing:.5px}
+.sub{margin:0 0 26px;opacity:.85;font-size:15px}
+.card{display:flex;align-items:center;gap:14px;background:#fff;color:#1f2430;text-decoration:none;
+ padding:16px 16px;border-radius:16px;margin-bottom:14px;box-shadow:0 6px 18px rgba(0,0,0,.22);
+ transition:transform .08s ease, box-shadow .12s ease}
+.card:active{transform:scale(.98)}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.badge{flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:#c0392b;color:#fff;
+ display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px}
+.ct{display:flex;flex-direction:column;flex:1 1 auto}
+.ct b{font-size:18px}
+.ct small{color:#6b7280;font-size:13px;margin-top:2px}
+.arr{color:#c0392b;font-size:26px;font-weight:700}
+.foot{margin-top:20px;text-align:center;font-size:13px;opacity:.85}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <h1>Trainingspläne</h1>
+ <p class="sub">Wähle deinen Plan</p>
+ <a class="card" href="wowa.html"><span class="badge">W</span><span class="ct"><b>Wowa</b><small>Muskelaufbau · 68 → 75 kg</small></span><span class="arr">›</span></a>
+ <a class="card" href="atilla.html"><span class="badge">A</span><span class="ct"><b>Atilla</b><small>Muskelaufbau · 75 → 85 kg</small></span><span class="arr">›</span></a>
+ <p class="foot">Läuft komplett offline · Häkchen &amp; Notizen werden gespeichert</p>
+</main>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>
